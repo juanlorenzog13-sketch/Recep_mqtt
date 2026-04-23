@@ -13,6 +13,35 @@ st.set_page_config(
 # Estilos personalizados
 st.markdown("""
 <style>
+/* Make text inside inputs visible */
+.stTextInput input,
+.stNumberInput input,
+.stTextArea textarea {
+    color: #8a2158 !important;
+    background-color: white !important;
+}
+
+/* Placeholder text */
+.stTextInput input::placeholder,
+.stTextArea textarea::placeholder {
+    color: #c06a96 !important;
+    opacity: 1 !important;
+}
+
+/* Selectbox text */
+div[data-baseweb="select"] span {
+    color: #8a2158 !important;
+}
+
+/* Labels above widgets */
+label, .stMarkdown, p {
+    color: #b02a6b;
+}
+</style>
+""", unsafe_allow_html=True)
+
+st.markdown("""
+<style>
 .stApp {
     background: linear-gradient(135deg, #ffe3ef 0%, #ffd6ea 45%, #fff0f7 100%);
 }
